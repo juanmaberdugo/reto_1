@@ -1,7 +1,9 @@
 # Reto 1
 
 ### Primer punto
-Para crear una funcion capaz de realizar las operaciones basicas matematicas, use el match case para que dependiendo de lo que se ingrese por consola, la funcion realize las operaciones.
+Crear una función que realice operaciones básicas (suma, resta, multiplicación, división) entre dos números, según la elección del usuario, la forma de entrada de la función será los dos operandos y el caracter usado para la operación. entrada: (1,2,"+"), salida (3).
+
+Para crear una función capaz de realizar las operaciones básicas matemáticas, utilicé match case para que, dependiendo de lo que se ingrese por consola, la función realice las operaciones.
   ````python
 def operaciones_basicas(numero_1, numero_2, eleccion_operacion):
     operacion_matematica = eleccion_operacion.lower().replace(" ", "")
@@ -25,7 +27,9 @@ print(operaciones_basicas(primer_numero, segundo_numero, operacion))
 ````
 
 ### Segundo punto
-Primero para que los caracteres de las palabras estuvieran en minuscula use la funcion lower(), despues se usa la funcion len() para saber la longitud de la palabra y finalmente se usa el ciclo que teniendo en cuenta la longitud de la palabra compara las dos mitades de la palabra y determina si son iguales
+Realice una función que permita validar si una palabra es un palíndromo. Condición: No se vale hacer slicing para invertir la palabra y verificar que sea igual a la original.
+
+Primero, para que los caracteres de las palabras estuvieran en minúscula, usé la función lower(). Después, utilicé la función len() para saber la longitud de la palabra. Finalmente, empleé un ciclo que, teniendo en cuenta la longitud de la palabra, compara las dos mitades y determina si son iguales.
   ````python
 def palindromo(palabra):
     palabra = palabra.lower()
@@ -43,7 +47,9 @@ print(palindromo(palabra))
 ````
 
 ### Tercer punto
-Para este punto, uso un ciclo para iterar desde 2 hasta el mismo numero, asi mismo le aplico el operador del modulo para verificar que en el momento en el que el numero dividido por el indice de como residuo cero indique que el numero es divisible por otro que no sea el mismo o uno.
+Escribir una función que reciba una lista de números y devuelva solo aquellos que son primos. La función debe recibir una lista de enteros y retornar solo aquellos que sean primos.
+
+Para este punto, uso un ciclo para iterar desde 2 hasta el mismo número. Asimismo, aplico el operador módulo para verificar que, en el momento en que el número dividido por el índice dé como residuo cero, se indique que el número es divisible por otro que no sea él mismo o uno.
   ````python
 def primo(numero):
     for i in range(2, numero):
@@ -58,7 +64,9 @@ print(primo(numero))
 ````
 
 ### Cuarto punto
-Primero se realiza una condicional con el fin de verificar si se pueden sumar los elementos de la lista de manera consecutiva, si la lista cuenta con menos de dos numeros la funcion retorna None, despues se crea la variable mayor_suma para los dos primeros elementos de la lista, despues el ciclo recorre la lista desde el primer elemento de esta misma hasta el penultimo de esta con el fin de hacer la suma de los numeros de forma consecutiva, finalmente se usa un condicional con el fin de comparar cada uno de las sumas que se realizaron en el ciclo con lo que esta ya almacenado en la variable y dependiendo de si es mayor que esta cambia el valor de esta misma.
+Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
+
+Primero, se realiza una condicional para verificar si se pueden sumar los elementos de la lista de manera consecutiva. Si la lista cuenta con menos de dos números, la función retorna None. Después, se crea la variable mayor_suma para almacenar la suma de los dos primeros elementos de la lista. A continuación, el ciclo recorre la lista desde el primer elemento hasta el penúltimo, con el fin de sumar los números de forma consecutiva. Finalmente, se utiliza un condicional para comparar cada una de las sumas realizadas en el ciclo con el valor almacenado en la variable. Si la nueva suma es mayor, se actualiza el valor de mayor_suma.
   ````python
 def suma_consecutivos(lista):
     if len(lista) < 2:
@@ -77,7 +85,9 @@ print(suma_consecutivos(lista))
 ````
 
 ### Quinto punto
-En esta funcion primero declaro un diccionario vacio donde voy a guardar las diferentes palabras para identificar si tienen los mismos caracteres pero en otro orden, despues de esto tomo cada una de las palabras y organizo cada una de sus letras para crear una tupla que va a ser la clave dentro de mi diccionario, cada que una palabra tenga los mismos caracteres que una anterior se va a apilar en una lista que va a ser el valor de la clave en el diccionario, finalmente retornara el diccionario que cumpla con la condicion
+Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
+
+En esta función, primero declaro un diccionario vacío donde voy a guardar las diferentes palabras para identificar si tienen los mismos caracteres pero en distinto orden. Después, tomo cada una de las palabras y organizo sus letras para crear una tupla que será la clave dentro del diccionario. Cada vez que una palabra tenga los mismos caracteres que otra anterior, se agregará a una lista que será el valor de esa clave en el diccionario. Finalmente, se retorna el diccionario que cumple con esta condición.
   ````python
 def mismos_caracteres(lista):
     grupos = {}
